@@ -1,0 +1,26 @@
+{
+  "name": "xcode-devteams",
+  "version": "1.0.0",
+  "description": "CLI for information about Xcode Developer Teams",
+  "bin": {
+    "xcode-devteams": "node cli.js"
+  },
+  "files": [
+    "bin/Release/net6.0-macos/osx-x64/xcode-devteams.app",
+    "cli.js"
+  ],
+  "scripts": {
+    "build": "dotnet build -c Release",
+    "test": "node cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortend/xcode-devteams.git"
+  },
+  "author": "Fuse Open",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mortend/xcode-devteams/issues"
+  },
+  "homepage": "https://github.com/mortend/xcode-devteams#readme"
+}
