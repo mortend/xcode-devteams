@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CLI for information about Xcode Developer Teams",
   "bin": {
-    "xcode-devteams": "node cli.js"
+    "xcode-devteams": "cli.js"
   },
   "files": [
     "bin/xcode-devteams",
