@@ -1,9 +1,13 @@
 const path = require("path")
-const { spawn } = require("child_process")
+const os = require("os")
+const {spawn} = require("child_process")
 
-const exe = path.join(
-    __dirname,
-    "bin/Release/net6.0-macos/osx-x64/xcode-devteams.app/Contents/MacOS/xcode-devteams"
-)
-spawn(exe, process.argv.slice(2), { stdio: "inherit" })
+if (os.platform() !== "darwin") {
+    console.error("xcode-devteams only runs on macOS")
+    process.exit(1)
+}
+
+const exe = path.join(__dirname, "bin/xcode-devteams")
+
+spawn(exe, process.argv.slice(2), {stdio: "inherit"})
     .on("exit", process.exit)

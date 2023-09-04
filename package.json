@@ -6,11 +6,12 @@
     "xcode-devteams": "node cli.js"
   },
   "files": [
-    "bin/Release/net6.0-macos/osx-x64/xcode-devteams.app",
+    "bin/xcode-devteams",
     "cli.js"
   ],
   "scripts": {
-    "build": "dotnet build -c Release",
+    "build": "cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build .",
+    "prepack": "rm -rf bin CMakeCache.txt && npm run build",
     "test": "node cli.js"
   },
   "repository": {
