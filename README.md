@@ -1,5 +1,7 @@
 # xcode-devteams
 
+[![NPM package](https://img.shields.io/npm/v/xcode-devteams.svg?style=flat-square)](https://www.npmjs.com/package/xcode-devteams)
+
 CLI for information about Xcode developer teams
 
 ## Install
